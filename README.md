@@ -44,17 +44,7 @@ Gestión de productos, categorías y movimientos de inventario, con control de s
 
 Entidades: `usuario`, `categoria`, `producto`, `movimiento` (3FN). Relaciones: `categoria 1─N producto`, `producto 1─N movimiento`, `usuario 1─N movimiento`. Script reproducible en `database/tecnostock.sql` (crea la BD, tablas, restricciones y datos de prueba).
 
-## 3. Instalación (XAMPP)
-
-1. Copiar la carpeta `tecnostock` en `C:\xampp\htdocs\`.
-2. Iniciar **Apache** y **MySQL** en XAMPP.
-3. En phpMyAdmin → *Importar* → `database/tecnostock.sql` (o `mysql -u root < database/tecnostock.sql`).
-4. Abrir `http://localhost/tecnostock/`.
-5. Credenciales de prueba: `admin@tecnostock.com` / `1234`.
-
-Requiere MySQL 8.0.16+ o MariaDB 10.2.1+ (versiones anteriores ignoran las restricciones `CHECK`). Si cambia la clave de root o el nombre de la BD, editar `conexion.php`.
-
-## 4. Seguridad y calidad
+## 3. Seguridad y calidad
 
 - PDO con consultas preparadas reales (`ATTR_EMULATE_PREPARES = false`).
 - Contraseñas con `password_hash` / `password_verify`; `session_regenerate_id` al ingresar.
