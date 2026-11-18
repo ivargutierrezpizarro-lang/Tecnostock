@@ -55,7 +55,6 @@ Entidades: `usuario`, `categoria`, `producto`, `movimiento` (3FN). Relaciones: `
 
 ## 5. Plan de pruebas
 
-Completar la columna **Resultado** (OK / FALLA) y guardar capturas como evidencia en `docs/evidencias/` (nombre sugerido: `P01.png`, `P02.png`…). Datos de partida: los del script SQL.
 
 | ID | Tipo | Caso | Datos / pasos | Resultado esperado | Resultado |
 |----|------|------|---------------|--------------------|-----------|
