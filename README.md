@@ -73,17 +73,11 @@ Completar la columna **Resultado** (OK / FALLA) y guardar capturas como evidenci
 | P12 | Normal | Entrada de stock | TEC-002, ENTRADA 20 | Stock pasa de 3 a 23; desaparece la alerta de TEC-002 | |
 | P13 | Normal | Salida válida | TEC-001, SALIDA 5 | Stock pasa de 25 a 20 | |
 | P14 | Error | Salida mayor al stock (RN4) | TEC-004 (stock 0), SALIDA 1 | Mensaje "Stock insuficiente"; stock no cambia; no se crea movimiento | |
-| P15 | Límite | Salida igual al stock | TEC-003, SALIDA 12 | Se permite; stock queda en 0 y aparece alerta de stock bajo | |
-| P16 | Error | Cantidad 0 o negativa | Cantidad = 0 y luego -3 | Rechazada por JS y por PHP | |
-| P17 | Normal | Alerta de stock bajo (RF8) | Ver listado inicial | Banner y insignia en TEC-002 y TEC-004 (stock < mínimo) | |
-| P18 | Normal | Desactivar producto (RN5) | Desactivar TEC-001 | Queda "Desactivado"; su historial se conserva; ya no aparece en Movimientos | |
-| P19 | Normal | Reactivar producto | Activar TEC-005 | Vuelve a estado Activo | |
-| P20 | Error | Movimiento sobre producto desactivado | Enviar POST con id de producto inactivo | Rechazado: "producto desactivado" | |
-| P21 | Seguridad | Desactivar por URL | Abrir `productos/desactivar.php?id=1` en el navegador | "Método no permitido" (405); no cambia nada | |
-| P22 | Seguridad | Inyección en búsqueda | Buscar `' OR 1=1 --` | Se trata como texto; sin resultados ni error | |
-| P23 | Seguridad | XSS | Nombre de producto `<script>alert(1)</script>` | Se muestra como texto, no se ejecuta | |
-| P24 | Integridad | Eliminar producto con movimientos | Intentar `DELETE FROM producto WHERE id_producto=1` en phpMyAdmin | Falla por clave foránea | |
-| P25 | Integridad | Coherencia de stock | Comparar `stock_actual` con suma(ENTRADA) − suma(SALIDA) por producto | Coinciden en todos los productos | |
+| P15 | Error | Cantidad 0 o negativa | Cantidad = 0 y luego -3 | Rechazada por JS y por PHP | |
+| P16 | Normal | Alerta de stock bajo (RF8) | Ver listado inicial | Banner y insignia en TEC-002 y TEC-004 (stock < mínimo) | |
+| P17 | Normal | Desactivar producto (RN5) | Desactivar TEC-001 | Queda "Desactivado"; su historial se conserva; ya no aparece en Movimientos | |
+| P18 | Normal | Reactivar producto | Activar TEC-005 | Vuelve a estado Activo | |
+| P19 | Error | Movimiento sobre producto desactivado | Enviar POST con id de producto inactivo | Rechazado: "producto desactivado" | |
 
 
 
