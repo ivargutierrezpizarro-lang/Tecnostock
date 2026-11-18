@@ -1,6 +1,5 @@
 # TecnoStock – Sistema de inventario
 
-Aplicación web (PHP 8 + PDO + MySQL + Bootstrap 5) para que TecnoStock centralice su catálogo de productos y controle entradas y salidas de existencias. Sin frameworks complejos.
 
 ## 1. Análisis
 
