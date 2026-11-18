@@ -66,12 +66,12 @@ Completar la columna **Resultado** (OK / FALLA) y guardar capturas como evidenci
 | P05 | Error | Código duplicado (RN1) | Crear otro producto con código TEC-001 | Mensaje "El código … ya existe"; no se crea |OK |
 | P06 | Límite | Precio negativo (RN2) | Precio = -5 | JS lo bloquea; si se evita JS, PHP lo rechaza |OK |
 | P07 | Límite | Stock mínimo decimal | Stock mínimo = 2.5 | Mensaje "número entero" |OK |
-| P08 | Normal | Buscar por código | Buscar "TEC-003" | Solo se muestra el teclado | OK|
+| P08 | Normal | Buscar por código | Buscar "TEC-100" | Solo se muestra el parlante | OK|
 | P09 | Normal | Buscar por categoría | Buscar "Audio" | Solo productos de Audio |OK |
 | P10 | Límite | Búsqueda sin resultados | Buscar "zzz" | Mensaje "No se encontraron productos…" |OK |
-| P11 | Normal | Editar producto | Cambiar precio de TEC-003 a 41.990 | Se guarda y se ve en el listado; el código y el stock no cambian |OK |
-| P12 | Normal | Entrada de stock | TEC-002, ENTRADA 20 | Stock pasa de 3 a 23; desaparece la alerta de TEC-002 |OK |
-| P13 | Normal | Salida válida | TEC-001, SALIDA 5 | Stock pasa de 25 a 20 |OK |
+| P11 | Normal | Editar producto | Cambiar precio de TEC-100 a 42.000 | Se guarda y se ve en el listado; el código y el stock no cambian |OK |
+| P12 | Normal | Entrada de stock | TEC-001, ENTRADA 5 | Stock pasa de 0 a 5; desaparece la alerta de TEC-001 |OK |
+| P13 | Normal | Salida válida | TEC-001, SALIDA 5 | Stock pasa de 30 a 5 |OK |
 | P14 | Error | Salida mayor al stock (RN4) | TEC-004 (stock 0), SALIDA 1 | Mensaje "Stock insuficiente"; stock no cambia; no se crea movimiento |OK |
 | P15 | Error | Cantidad 0 o negativa | Cantidad = 0 y luego -3 | Rechazada por JS y por PHP |OK |
 | P16 | Normal | Alerta de stock bajo (RF8) | Ver listado inicial | Banner y insignia en TEC-002 y TEC-004 (stock < mínimo) |OK |
