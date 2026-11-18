@@ -86,14 +86,7 @@ Completar la columna **Resultado** (OK / FALLA) y guardar capturas como evidenci
 | P24 | Integridad | Eliminar producto con movimientos | Intentar `DELETE FROM producto WHERE id_producto=1` en phpMyAdmin | Falla por clave foránea | |
 | P25 | Integridad | Coherencia de stock | Comparar `stock_actual` con suma(ENTRADA) − suma(SALIDA) por producto | Coinciden en todos los productos | |
 
-Consulta para P25:
 
-```sql
-SELECT p.codigo, p.stock_actual,
-       COALESCE(SUM(CASE m.tipo WHEN 'ENTRADA' THEN m.cantidad ELSE -m.cantidad END), 0) AS calculado
-FROM producto p LEFT JOIN movimiento m ON m.id_producto = p.id_producto
-GROUP BY p.id_producto, p.codigo, p.stock_actual;
-```
 
 ## 6. Estructura
 
@@ -107,11 +100,3 @@ tecnostock/
 ├── movimientos/ registrar.php  historial.php
 └── database/tecnostock.sql
 ```
-
-## 7. Guion sugerido para el video (5 min)
-
-1. (0:00–0:30) Problema, actor y alcance.
-2. (0:30–2:00) Demo: login → crear producto → buscar → editar → movimiento de entrada y salida → alerta de stock bajo → desactivar.
-3. (2:00–3:00) Interfaz: Bootstrap, validaciones JS y mensajes.
-4. (3:00–4:30) Código: `registrar.php` (transacción, `FOR UPDATE`, RN4), `guardar.php` (PDO, código duplicado), `validaciones.js` y `validar_producto()`.
-5. (4:30–5:00) Base de datos: relaciones, restricciones y script SQL.
