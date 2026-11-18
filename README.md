@@ -27,7 +27,6 @@ Gestión de productos, categorías y movimientos de inventario, con control de s
 | RF9 | Registrar categorías | `categorias/crear.php` |
 | RF10 | Consultar historial de movimientos (trazabilidad) | `movimientos/historial.php` |
 
-> **Decisión de diseño sobre "modificar cantidades":** el stock actual no se edita a mano; solo cambia mediante movimientos. Así cada variación queda registrada con fecha, usuario y motivo, y el stock siempre es auditable. Sí se puede modificar el stock mínimo.
 
 ### Reglas de negocio y su control
 
