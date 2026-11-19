@@ -55,7 +55,6 @@ Entidades: `usuario`, `categoria`, `producto`, `movimiento` (3FN). Relaciones: `
 
 ## 5. Plan de pruebas
 
-Completar la columna **Resultado** (OK / FALLA) y guardar capturas como evidencia en `docs/evidencias/` (nombre sugerido: `P01.png`, `P02.png`…). Datos de partida: los del script SQL.
 
 | ID | Tipo | Caso | Datos / pasos | Resultado esperado | Resultado |
 |----|------|------|---------------|--------------------|-----------|
@@ -81,15 +80,3 @@ Completar la columna **Resultado** (OK / FALLA) y guardar capturas como evidenci
 
 
 
-## 6. Estructura
-
-```
-tecnostock/
-├── index.php  login.php  procesar_login.php  logout.php  conexion.php
-├── assets/css/estilos.css   assets/js/validaciones.js
-├── includes/  funciones.php  header.php  footer.php
-├── categorias/  crear.php
-├── productos/   crear.php  guardar.php  editar.php  activar.php  desactivar.php
-├── movimientos/ registrar.php  historial.php
-└── database/tecnostock.sql
-```
