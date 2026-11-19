@@ -19,7 +19,7 @@ $titulo = $titulo ?? 'TecnoStock';
 <nav class="navbar navbar-expand-lg navbar-dark navbar-tecnostock sticky-top py-3">
     <div class="container">
         <a class="navbar-brand fs-4" href="<?php echo $base; ?>index.php">
-            <i class="bi bi-box-seam me-2"></i>TecnoStock
+            <i class="bi-clipboard-data"></i>TecnoStock
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-label="Mostrar menú">
